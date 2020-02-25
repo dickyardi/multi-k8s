@@ -10,11 +10,11 @@ metadata:
 spec:
   tls:
     - hosts:
-        - stormcloaks.com
-        - www.stormcloaks.com
+        - client.stormcloaks.com
+        - www.client.stormcloaks.com
       secretName: k8s-multi-com
   rules:
-    - host: stormcloaks.com
+    - host: client.stormcloaks.com
       http:
         paths:
           - path: /
@@ -25,7 +25,7 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-    - host: www.stormcloaks.com
+    - host: www.client.stormcloaks.com
       http:
         paths:
           - path: /
