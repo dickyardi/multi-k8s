@@ -14,7 +14,7 @@ before_install:
     # Add kubectl
     - gcloud components update kubectl
     # Authorization google cloud with some service account
-    - gcloud activate-service-account --key-file service-account.json
+    - gcloud auth activate-service-account --key-file service-account.json
     # set project, compute/zone, and kubernetes cluster
     - gcloud config set project multi-k8s-266507
     - gcloud config set compute/zone asia-southeast1-a	
